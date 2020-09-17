@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT</title>
+    <style>
+        .button { background-color: aliceblue; border-radius: 10px}
+    </style>
+</head>
+<body>
+<p>Nhap gia tri vao mang:</p>
+
+<input type="text" id="input1">
+<button class="button" onclick="asd()">Add</button>
+
+<p>Nhap gia tri can kiem tra index:</p>
+
+<input type="text" id="input2">
+<button class="button" onclick="asdf()">Display</button>
+<div id="div1"></div>
+<div id="div2"></div>
+
+<script>
+    var newArray = [];
+    var i = 0;
+    function asd(){
+        newArray[i] = document.getElementById("input1").value;
+        i++;
+        alert("k")
+        document.getElementById("input1").value = "";
+    }
+    console.log(newArray)
+
+    function asdf(){
+        let findValue = document.getElementById("input2").value;
+        let j = 0;
+        for (j;j<newArray.length;j++){
+            if (newArray[j]===findValue){
+                document.getElementById("div1").innerHTML = "Co index la "+j;
+                break;
+            }
+        }
+        document.getElementById("div2").innerHTML = newArray;
+    }
+</script>
+</body>
+</html>
